@@ -1,3 +1,3 @@
 # MicroContainer
 
-A wonderful collaboration between Johannes Sim and Renzo Veldkamp
+A wonderful collaboration between Johannes Sim and Renzo Veldkamp.
