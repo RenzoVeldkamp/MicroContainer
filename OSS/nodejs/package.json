@@ -1,0 +1,13 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Johannes Sim",
+  "main": "helloWorld.js",
+  "scripts": {
+   "start": "node helloWorld.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

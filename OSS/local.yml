@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    ports:
+    - "4200:80"
+    links:
+    - nodejs
+  nodejs:
+    ports:
+    - "4201:8080"

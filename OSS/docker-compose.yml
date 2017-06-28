@@ -1,0 +1,22 @@
+# Showcase
+# Application of 3 Docker containers
+
+version: '2'
+services:
+  web:
+    image: sim007/staticws:latest
+    ports:
+    - "4200:80"
+    links:
+    - nodejs
+  nodejs:
+    image: sim007/nodejs:latest
+    ports:
+    - "4201:8080"
+
+# no config: docker-compose up -d
+# local    : docker-compose -f docker-compose.yml -f local.yml up -d
+# Sim001   : docker-compose -f docker-compose.yml -f Sim001Docker.yml up -d
+# Sim002   : docker-compose -f docker-compose.yml -f Sim002DockerHostAzure.yml up -d
+
+# down     : docker-compose down
