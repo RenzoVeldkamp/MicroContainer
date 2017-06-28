@@ -1,15 +1,15 @@
-# Showcase Website
-# Static WebSite - no tag
+# Showcase OSS
+# OSS - no tag
 
 FROM nginx:stable-alpine
 MAINTAINER Johannes Sim
-ENV REFRESHED_AT 2017-06-05
+ENV REFRESHED_AT 2017-06-28
 COPY  index.html *.png /usr/share/nginx/html/
 
 
-# build:  docker build -t sim007/staticws .
-# run:    docker run --name staticws -d -p 8090:80 sim007/staticws
-# delete: docker rm -f staticws
-# push:   docker push sim007/staticws
-# pull:   docker pull sim007/staticws
-# in:     docker exec -it staticws /bin/sh
+# build:  docker build -t centricms/html .
+# run:    docker run --name html -d -p 8090:80 centricms/html
+# delete: docker rm -f html
+# push:   docker push centricms/html
+# pull:   docker pull centricms/html
+# in:     docker exec -it html /bin/sh
