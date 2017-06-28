@@ -3,7 +3,7 @@
 
 FROM node:8-alpine
 MAINTAINER Johannes Sim
-ENV REFRESHED_AT 2017-06-18
+ENV REFRESHED_AT 2017-06-28
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -19,9 +19,9 @@ COPY . /usr/src/app
 EXPOSE 8080
 CMD [ "npm", "start" ]
 
-# build:  docker build -t sim007/nodejs .
-# run:    docker run --name nodejs -d -p 8090:8080 sim007/nodejs
+# build:  docker build -t centricms/nodejs .
+# run:    docker run --name nodejs -d -p 8090:8080 centricms/nodejs
 # delete: docker rm -f nodejs
-# push:   docker push sim007/nodejs
-# pull:   docker pull sim007/nodejs
+# push:   docker push centricms/nodejs
+# pull:   docker pull centricms/nodejs
 # in:     docker exec -it nodejs bin/sh
