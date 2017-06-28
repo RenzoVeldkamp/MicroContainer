@@ -1,0 +1,5 @@
+# example MongoDB with Mongo Express
+
+# pull mongo:3.5
+# docker run --name some-mongo -d mongo
+# docker run --link some-mongo:mongo -p 8081:8081 mongo-express
