@@ -11,10 +11,16 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install
+
+# RUN npm install
+CMD [ "npm", "install" ]
+
+#COPY node_modules/* /usr/src/app/node_modules/
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . /usr/src/app/
+
+RUN ls -lastr /usr/src/app/
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
@@ -24,4 +30,4 @@ CMD [ "npm", "start" ]
 # delete: docker rm -f nodejs
 # push:   docker push centricms/nodejs
 # pull:   docker pull centricms/nodejs
-# in:     docker exec -it nodejs bin/sh
+# in:     docker exec -it nodejs /bin/sh
