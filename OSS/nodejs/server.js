@@ -1,15 +1,10 @@
-'use strict';
+var express = require('express');
+var path = require('path');
+var app = express();
 
-const express = require('express');
+var movies = require('./movies');
+app.use('/api/movies', movies);
 
-// Constants
-const PORT = 8080;
-
-// App
-const app = express();
-app.get('/', function (req, res) {
-  res.send('Hello world\n');
+app.listen(process.env.PORT || 4201, function () {
+    console.info('The server is listening at port ' + (process.env.PORT || 4201));
 });
-
-app.listen(PORT);
-console.log('Running on http://localhost:' + PORT);

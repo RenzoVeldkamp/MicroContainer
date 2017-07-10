@@ -5,9 +5,12 @@
   "author": "Johannes Sim",
   "main": "helloWorld.js",
   "scripts": {
-   "start": "node helloWorld.js"
+    "start": "node helloWorld.js",
+    "movies": "node ./server.js",
+    "mdb": "concurrently \"ng serve --proxy-config proxy.conf.json\" \"node ./src/server/server.js\""
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.13.3"
   }
 }
