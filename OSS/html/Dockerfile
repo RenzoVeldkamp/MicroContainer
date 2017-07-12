@@ -8,7 +8,7 @@ COPY  index.html *.png /usr/share/nginx/html/
 
 
 # build:  docker build -t centricms/html .
-# run:    docker run --name html -d -p 8090:80 centricms/html
+# run:    docker run --name html -d -p 4200:80 centricms/html
 # delete: docker rm -f html
 # push:   docker push centricms/html
 # pull:   docker pull centricms/html
