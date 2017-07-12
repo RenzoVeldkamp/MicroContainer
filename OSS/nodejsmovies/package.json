@@ -1,16 +1,15 @@
 {
-  "name": "docker_web_app",
+  "name": "docker_nodejsmovies",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "Johannes Sim",
-  "main": "helloWorld.js",
+  "author": "Johannes Sim & Renzo Veldkamp",
+  "main": "server.js",
   "scripts": {
-    "start": "node helloWorld.js",
-    "movies": "node ./server.js",
-    "mdb": "concurrently \"ng serve --proxy-config proxy.conf.json\" \"node ./src/server/server.js\""
+    "movies": "node ./server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.13.3"
-  }
+  },
+  "license": "ISC"
 }
