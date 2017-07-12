@@ -1,0 +1,13 @@
+# Showcase
+# Config for Azure Sim002DockerHost
+
+version: '2'
+services:
+  web:
+    ports:
+    - "8900:80"
+    links:
+    - nodejs
+  nodejs:
+    ports:
+    - "8901:4201"
