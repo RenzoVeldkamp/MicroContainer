@@ -10,9 +10,9 @@ services:
     links:
     - nodejs
   nodejs:
-    image: centricms/html:latest
+    image: centricms/nodejsmovies:latest
     ports:
-    - "4201:8080"
+    - "8090:4201"
 
 # no config: docker-compose up -d
 # local    : docker-compose -f docker-compose.yml -f local.yml up -d
