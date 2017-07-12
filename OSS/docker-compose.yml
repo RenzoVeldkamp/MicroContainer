@@ -16,4 +16,5 @@ services:
 
 # no config: docker-compose up -d
 # local    : docker-compose -f docker-compose.yml -f local.yml up -d
+# cloud    : docker-compose -f docker-compose.yml -f Sim001Docker.yml up -d
 # down     : docker-compose down 
