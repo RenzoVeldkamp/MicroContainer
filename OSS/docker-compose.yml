@@ -1,5 +1,5 @@
-# Showcase
-# Application of 3 Docker containers
+# Showcase OSS
+# Application of 2 Docker containers
 
 version: '2'
 services:
