@@ -7,4 +7,4 @@ services:
     - nodejs
   nodejs:
     ports:
-    - "8900:4201"
+    - "8090:4201"
