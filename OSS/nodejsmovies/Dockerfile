@@ -1,4 +1,4 @@
-# Showcase
+# Showcase OSS
 # nodejsmovies - no tag
 
 FROM node:8-alpine
@@ -19,8 +19,8 @@ EXPOSE 4201
 CMD [ "npm", "run", "movies" ]
 
 # build:  docker build --no-cache -t centricms/nodejsmovies .
-# run:    docker run --name nodejsmovies -d -p 8090:4201 centricms/nodejsmovies
-# delete: docker rm -f nodejsmovies
+# run:    docker run --name centricms/nodejsmovies -d -p 8090:4201 centricms/nodejsmovies
+# delete: docker rm -f centricms/nodejsmovies
 # push:   docker push centricms/nodejsmovies
 # pull:   docker pull centricms/nodejsmovies
-# in:     docker exec -it nodejsmovies /bin/sh
+# in:     docker exec -it centricms/nodejsmovies /bin/sh

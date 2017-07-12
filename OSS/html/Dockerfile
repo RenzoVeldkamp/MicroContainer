@@ -12,4 +12,4 @@ COPY  index.html *.png /usr/share/nginx/html/
 # delete: docker rm -f  centricms/html
 # push:   docker push centricms/html
 # pull:   docker pull centricms/html
-# in:     docker exec -it  centricms/html /bin/sh
+# in:     docker exec -it centricms/html /bin/sh
