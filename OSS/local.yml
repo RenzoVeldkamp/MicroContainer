@@ -1,6 +1,9 @@
+# Showcase OSS
+# Config for localhost
+
 version: '2'
 services:
-  web:
+  html:
     ports:
     - "4200:80"
     links:
