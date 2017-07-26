@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  mvccore:
+    image: mvccore
+    build:
+      context: ./MVCCore
+      dockerfile: Dockerfile
