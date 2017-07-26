@@ -3,6 +3,8 @@ version: '3'
 services:
   mvccore:
     image: mvccore
+    ports:
+    - "5200:80"
     build:
       context: ./MVCCore
       dockerfile: Dockerfile
