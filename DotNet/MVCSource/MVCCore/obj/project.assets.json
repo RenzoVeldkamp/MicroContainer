@@ -9775,10 +9775,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Data\\VSTS\\MyFirstProject\\MVCCore\\MVCCore\\MVCCore.csproj",
+      "projectUniqueName": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\MVCCore.csproj",
       "projectName": "MVCCore",
-      "projectPath": "C:\\Data\\VSTS\\MyFirstProject\\MVCCore\\MVCCore\\MVCCore.csproj",
-      "outputPath": "C:\\Data\\VSTS\\MyFirstProject\\MVCCore\\MVCCore\\obj\\",
+      "projectPath": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\MVCCore.csproj",
+      "outputPath": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

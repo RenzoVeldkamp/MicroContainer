@@ -6,3 +6,11 @@ C:\Data\VSTS\MyFirstProject\MVCCore\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.pdb
 C:\Data\VSTS\MyFirstProject\MVCCore\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.AssemblyInfo.cs
 C:\Data\VSTS\MyFirstProject\MVCCore\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.dll
 C:\Data\VSTS\MyFirstProject\MVCCore\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.deps.json
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.runtimeconfig.json
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.runtimeconfig.dev.json
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.dll
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1\MVCCore.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.AssemblyInfo.cs
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.dll
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.pdb
