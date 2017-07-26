@@ -17,6 +17,7 @@ namespace MVCCore.Controllers
         {
             ViewData["Message"] = "Your application description page.";
 
+            throw new Exception("JAJAJAJJAJA");
             return View();
         }
 
