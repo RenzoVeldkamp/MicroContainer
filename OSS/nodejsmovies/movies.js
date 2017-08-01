@@ -7,6 +7,7 @@ router.use(bodyParser.urlencoded());
 var movies = require('./movies.json')
 
 router.get('/', function (req, res) {
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.json(movies);
 });
 
@@ -14,7 +15,8 @@ router.get('/:id', function (req, res) {
     var id = +req.params.id;
 
     var movie = movies.filter(m => m.id === id).pop();
-
+    
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.json(movie);
 });
 
@@ -26,6 +28,7 @@ router.post('/', function (req, res) {
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     res.location(fullUrl + '/' + movie.id);
 
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.statusCode = 201;
     res.end();
 });
@@ -37,6 +40,7 @@ router.put('/:id', function (req, res) {
     var oldMovie = movies.filter(m => m.id === id).pop();
     Object.assign(oldMovie, newMovie);
 
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.statusCode = 204;
     res.end();
 });
@@ -46,6 +50,7 @@ router.delete('/:id', function (req, res) {
 
     movies = movies.filter(m => m.id !== id);
 
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.statusCode = 204;
     res.end();
 });

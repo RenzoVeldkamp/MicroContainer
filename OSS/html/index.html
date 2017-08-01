@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Centric's web container (OSS)</title>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
 <body>
 
 <h1>Hello Static Website</h1>
@@ -8,8 +13,62 @@
 
 <img src="centric_logo_x2.png" alt="centric.eu">
 
-<a href="http://localhost:8090/api/movies" target="_blank" title="Klik HIER" ><h2>Somewhat more dynamic</h2></a>
+<!-- <a href="http://localhost:8090/api/movies" target="_blank" title="Klik HIER" ><h2>Somewhat more dynamic</h2></a> -->
 
-<p>Versie: 01.03.00 - 12 juli 2017</p>
+<div id="movies"></div>
+
+<button onclick="loadMovies()">Laad de films maar</button>
+
+<p id="retrievaldate"></p>
+
+<p>Versie: 01.04.00 - 1 augustus 2017</p>
+
+<script type="text/javascript">
+function loadMovies(){
+    setTimeout(function(){
+        doApiCall();
+    }, 100);
+}
+
+function doApiCall(){
+    var elm = $('#movies');
+
+    if (elm){
+        elm.empty();
+
+        $.ajax({
+            type: 'GET',
+            url:'http://localhost:8090/api/movies',
+            dataType: 'json',
+            success:function(movies){
+                for(var i = 0; i < movies.length; i++){
+                    var movie = movies[i];
+                    $(elm).append(parseMovie(movie));
+                }
+
+                $('#retrievaldate').text('Last retrieval at: ' + new Date());
+            },
+            error:function(){
+                $('#retrievaldate').text('ERROR occurred at: ' + new Date());
+            }
+        });        
+    }
+}
+
+function parseMovie(movie){
+    var nextElm = document.createElement('div');
+
+    var titleElm =document.createElement('h1');
+    nextElm.appendChild(titleElm);
+    $(titleElm).text(movie.title);
+
+    var imageElm =document.createElement('img');
+    nextElm.appendChild(imageElm);
+    imageElm.alt=movie.poster_path;
+    imageElm.src=movie.poster_path;
+
+    return nextElm;
+}
+</script>
 </body>
 </html>

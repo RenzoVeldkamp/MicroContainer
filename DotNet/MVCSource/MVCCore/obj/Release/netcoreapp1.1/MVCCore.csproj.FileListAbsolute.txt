@@ -3,6 +3,7 @@ C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Release\netcoreapp1
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Release\netcoreapp1.1\MVCCore.runtimeconfig.dev.json
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Release\netcoreapp1.1\MVCCore.dll
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Release\netcoreapp1.1\MVCCore.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.csprojResolveAssemblyReference.cache
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.AssemblyInfo.cs
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.dll
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.pdb
