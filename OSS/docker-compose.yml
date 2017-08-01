@@ -14,7 +14,8 @@ services:
     ports:
     - "8090:4201"
 
-# no config: docker-compose up -d
-# local    : docker-compose -f docker-compose.yml -f local.yml up -d
-# cloud    : docker-compose -f docker-compose.yml -f Sim001Docker.yml up -d
-# down     : docker-compose down 
+# app config: in .env
+# no config : docker-compose up -d
+# local     : docker-compose -f docker-compose.yml -f local.yml up -d
+# cloud     : docker-compose -f docker-compose.yml -f dockerhost01.yml up -d
+# down      : docker-compose down 
