@@ -3,7 +3,7 @@
 
 FROM nginx:stable-alpine
 MAINTAINER Johannes Sim / Remco Veldkamp
-ENV REFRESHED_AT 2017-07-12
+ENV REFRESHED_AT 2017-08-01
 COPY  index.html *.png /usr/share/nginx/html/
 
 
