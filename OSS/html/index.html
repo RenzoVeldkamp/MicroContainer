@@ -7,6 +7,10 @@
     </head>
 <body>
 
+<div style="float:right;">
+    <iframe id="mvcframe" src="" frameborder="1" style="width:1000px;height:650px;"></iframe>
+</div>
+    
 <h1>Hello Static Website</h1>
 
 <p>Continuously Delivered by:</p>
@@ -14,9 +18,9 @@
 <img src="centric_logo_x2.png" alt="centric.eu">
 
 <div id="buttons">
-<button onclick="gotoMvc()">Laad de MVC-pagina</button>
+    <button onclick="gotoMvc()">Laad de MVC-pagina</button>
 
-<button onclick="loadMovies()">Laad de films maar</button>
+    <button onclick="loadMovies()">Laad de films maar</button>
 </div>
 
 <p id="retrievaldate"></p>
@@ -27,7 +31,9 @@
 
 <script type="text/javascript">
 function gotoMvc(){
-    window.location.href='http://localhost:8081';
+    //window.location.href='http://localhost:8081';
+    var frame = document.getElementById('mvcframe');
+    frame.src='http://localhost:8081';
 }
 
 function loadMovies(){
