@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -9774,15 +9774,27 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\MVCCore.csproj",
       "projectName": "MVCCore",
       "projectPath": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\MVCCore.csproj",
+      "packagesPath": "C:\\Users\\RVeldkam\\.nuget\\packages\\",
       "outputPath": "C:\\Data\\GitRepos\\MicroContainer\\DotNet\\MVCSource\\MVCCore\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\RVeldkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}

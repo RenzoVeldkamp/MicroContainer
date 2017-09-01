@@ -13,17 +13,23 @@
 
 <img src="centric_logo_x2.png" alt="centric.eu">
 
-<!-- <a href="http://localhost:8090/api/movies" target="_blank" title="Klik HIER" ><h2>Somewhat more dynamic</h2></a> -->
-
-<div id="movies"></div>
+<div id="buttons">
+<button onclick="gotoMvc()">Laad de MVC-pagina</button>
 
 <button onclick="loadMovies()">Laad de films maar</button>
+</div>
 
 <p id="retrievaldate"></p>
 
-<p>Versie: 01.04.00 - 1 augustus 2017</p>
+<div id="movies"></div>
+
+<p>Versie: 01.05.00 - 1 september 2017</p>
 
 <script type="text/javascript">
+function gotoMvc(){
+    window.location.href='http://localhost:8081';
+}
+
 function loadMovies(){
     setTimeout(function(){
         doApiCall();
@@ -38,7 +44,7 @@ function doApiCall(){
 
         $.ajax({
             type: 'GET',
-            url:'http://localhost:8090/api/movies',
+            url:'http://localhost:8080/',
             dataType: 'json',
             success:function(movies){
                 for(var i = 0; i < movies.length; i++){

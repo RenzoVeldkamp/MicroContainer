@@ -7,3 +7,4 @@ C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.AssemblyInfo.cs
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.dll
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Release\netcoreapp1.1\MVCCore.csproj.CoreCompileInputs.cache

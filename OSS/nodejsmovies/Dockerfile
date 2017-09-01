@@ -3,7 +3,7 @@
 
 FROM node:8-alpine
 MAINTAINER Johannes Sim / Renzo Veldkamp
-ENV REFRESHED_AT 2017-07-12
+ENV REFRESHED_AT 2017-09-01
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -15,12 +15,11 @@ COPY . /usr/src/app/
 # Install app dependencies
 RUN npm install
 
-EXPOSE 4201
 CMD [ "npm", "run", "movies" ]
 
 # build:  docker build --no-cache -t centricms/nodejsmovies .
-# run:    docker run --name centricms/nodejsmovies -d -p 8090:4201 centricms/nodejsmovies
-# delete: docker rm -f centricms/nodejsmovies
+# run:    docker run --name nodejsmovies -d -p 8090:4201 centricms/nodejsmovies
+# delete: docker rm -f nodejsmovies
 # push:   docker push centricms/nodejsmovies
 # pull:   docker pull centricms/nodejsmovies
-# in:     docker exec -it centricms/nodejsmovies /bin/sh
+# in:     docker exec -it nodejsmovies /bin/sh

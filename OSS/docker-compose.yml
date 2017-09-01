@@ -7,12 +7,21 @@ services:
     image: centricms/html:${webVersion}
     ports:
     - "4200:80"
+    - "8080:8080"
+    - "8081:8081"
     links:
     - api
+    - my-running-site
+   # volumes:
+   # - "./html/conf:/etc/nginx/conf.d/:ro"
   api:
     image: centricms/nodejsmovies:${apiVersion}
-    ports:
-    - "8090:4201"
+#    ports:
+#    - "8090:4201"
+  my-running-site:
+    image: centricms/mvc
+#    depends_on:
+#    - "web"
 
 # app config: in .env
 # no config : docker-compose up -d
