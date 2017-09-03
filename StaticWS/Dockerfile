@@ -8,7 +8,7 @@ FROM nginx:stable-alpine
 COPY index.html *.png /usr/share/nginx/html/
 
 
-# build:  docker build -t centricms/staticws:latest .
+# build:  docker image build -t centricms/staticws:latest .
 
 # push:   docker push centricms/staticws:latest
 # pull:   docker pull centricms/staticws:latest
