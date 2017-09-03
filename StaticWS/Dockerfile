@@ -1,12 +1,11 @@
 # Showcase Static Website
 # with tag
 
-LABEL MAINTAINER="Johannes Sim / Remco Veldkamp"
-ENV REFRESHED_AT 2017-09-03
-
 FROM nginx:stable-alpine
 COPY index.html *.png /usr/share/nginx/html/
 
+LABEL MAINTAINER="Johannes Sim / Remco Veldkamp"
+ENV REFRESHED_AT 2017-09-03
 
 # build:  docker image build -t centricms/staticws:latest .
 
