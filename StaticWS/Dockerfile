@@ -15,5 +15,5 @@ ENV REFRESHED_AT 2017-09-03
 # run:    docker container run --name staticws -d -p 4200:80 centricms/staticws:latest
 # Azure:  docker container run --name staticws -d -p 8901:80 centricms/staticws:latest
 
-# delete: docker container rm -f  centricms/staticws:latest
-# in:     docker container exec -it centricms/staticws:latest /bin/sh
+# delete: docker container rm -f stasticws
+# in:     docker container exec -it staticws /bin/sh
