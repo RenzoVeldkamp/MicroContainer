@@ -2,7 +2,7 @@
 # DotNet - latest
 
 FROM microsoft/aspnet:4.7
-MAINTAINER Johannes Sim / Renzo Veldkamp
+LABEL MAINTAINER="Johannes Sim / Renzo Veldkamp"
 ENV REFRESHED_AT 2017-07-26
 
 # build:  docker build -t centricms/mvc --build-arg site_root=/
