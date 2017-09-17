@@ -4,8 +4,8 @@
 FROM nginx:stable-alpine
 COPY index.html *.png /usr/share/nginx/html/
 
-LABEL MAINTAINER="Johannes Sim / Renzo Veldkamp"
-ENV REFRESHED_AT 2017-09-03
+LABEL MAINTAINER="Johannes Sim / Renzo Veldkamp" \
+      REFRESHED_AT="2017-09-17"
 
 # build:  docker image build -t centricms/staticws:latest .
 
