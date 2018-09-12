@@ -1,0 +1,15 @@
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Release\netcoreapp2.1\ApenContainer.deps.json
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Release\netcoreapp2.1\ApenContainer.runtimeconfig.json
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Release\netcoreapp2.1\ApenContainer.runtimeconfig.dev.json
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Release\netcoreapp2.1\ApenContainer.dll
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Release\netcoreapp2.1\ApenContainer.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.csprojAssemblyReference.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.csproj.CoreCompileInputs.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.RazorAssemblyInfo.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.RazorAssemblyInfo.cs
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.AssemblyInfoInputs.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.AssemblyInfo.cs
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.RazorTargetAssemblyInfo.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.dll
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.pdb
