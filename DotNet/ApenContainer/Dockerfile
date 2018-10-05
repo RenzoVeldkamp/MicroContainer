@@ -18,4 +18,4 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "ApenContainer.dll"]
 
-# docker container run -d -p 5001:80 centricms/apendotnet:latest --name apen
+# docker container run -d -p 5001:80 --name apen centricms/apendotnet:latest
