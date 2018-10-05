@@ -7,7 +7,7 @@ WORKDIR /src
 COPY ["ApenContainer.csproj", ""]
 RUN dotnet restore "ApenContainer.csproj"
 COPY . .
-WORKDIR "src/"
+WORKDIR "/src/"
 RUN dotnet build "ApenContainer.csproj" -c Release -o /app
 
 FROM build AS publish
@@ -18,4 +18,5 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "ApenContainer.dll"]
 
-# docker container run -d -p 5001:80 --name apen centricms/apendotnet:latest
+# build-command: docker image build -t centricms/apencontainer .
+# run-command: docker container run -d -p 5001:80 --name apen centricms/apencontainer:latest
