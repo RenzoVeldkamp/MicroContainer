@@ -1,0 +1,10 @@
+*.pyc
+project.lock.json
+bin/
+obj/
+.vs/
+.vscode/
+launch.json
+tasks.json
+\bin
+\obj
