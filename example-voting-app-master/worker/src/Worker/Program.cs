@@ -28,10 +28,14 @@ namespace Worker
                 var definition = new { vote = "", voter_id = "" };
                 while (true)
                 {
+                    // Slow down to prevent CPU spike, only query each 100ms
+                    Thread.Sleep(100);
+
                     // Reconnect redis if down
                     if (redisConn == null || !redisConn.IsConnected) {
                         Console.WriteLine("Reconnecting Redis");
-                        redis = OpenRedisConnection("redis").GetDatabase();
+                        redisConn = OpenRedisConnection("redis");
+                        redis = redisConn.GetDatabase();
                     }
                     string json = redis.ListLeftPopAsync("votes").Result;
                     if (json != null)
@@ -100,7 +104,7 @@ namespace Worker
 
         private static ConnectionMultiplexer OpenRedisConnection(string hostname)
         {
-            // Use IP address to workaround hhttps://github.com/StackExchange/StackExchange.Redis/issues/410
+            // Use IP address to workaround https://github.com/StackExchange/StackExchange.Redis/issues/410
             var ipAddress = GetIp(hostname);
             Console.WriteLine($"Found redis at {ipAddress}");
 
