@@ -14,3 +14,6 @@ C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\bin\Debug\netcoreapp1.1
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.AssemblyInfo.cs
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.dll
 C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.csprojAssemblyReference.cache
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.csproj.CoreCompileInputs.cache
+C:\Data\GitRepos\MicroContainer\DotNet\MVCSource\MVCCore\obj\Debug\netcoreapp1.1\MVCCore.AssemblyInfoInputs.cache

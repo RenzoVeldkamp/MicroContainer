@@ -7,7 +7,7 @@ ENV REFRESHED_AT 2017-09-01
 
 COPY  index.html *.png /usr/share/nginx/html/
 
-COPY  nginx.conf /etc/nginx/nginx.conf
+# COPY  nginx.conf /etc/nginx/nginx.conf
 
 # build:  docker build -t centricms/html .
 # run:    docker run --name html -d -p 4200:80 centricms/html
