@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 
 namespace ApenHok
 {
-    public class GetApenMessageHandler : Rebus.Handlers.IHandleMessages<BusMessage>
+    /*
+    public class RebusGetApenMessageHandler : Rebus.Handlers.IHandleMessages<BusMessage>
     {
         public Task Handle(BusMessage message)
         {
@@ -13,4 +14,5 @@ namespace ApenHok
             });
         }
     }
+    */
 }

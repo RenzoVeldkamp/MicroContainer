@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  apencontainer:
+    image: ${DOCKER_REGISTRY-}apencontainer
+    build:
+      context: .
+      dockerfile: Dockerfile

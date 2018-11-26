@@ -27,3 +27,4 @@ C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\Ape
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.dll
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.pdb
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\appsettings.json

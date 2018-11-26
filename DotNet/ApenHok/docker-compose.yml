@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  apenhok:
+    image: ${DOCKER_REGISTRY-}apenhok
+    build:
+      context: .
+      dockerfile: ApenHok/Dockerfile
+    volumes:
+     -  C:\data\temp:/apenvolume
