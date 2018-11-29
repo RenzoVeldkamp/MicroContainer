@@ -52,7 +52,7 @@ namespace ApenHok
         private static void Seed()
         {
             Console.WriteLine("Starting Seed...");
-            IList<Aap> apen = ApenHok.Data.ApenProvider.GetApen().ToList();
+            IList<Aap> apen = ApenProvider.GetApen().ToList();
 
             if (!apen.Any())
             {

@@ -1,20 +1,4 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-FROM microsoft/dotnet:2.1-sdk AS build
-WORKDIR /src
-COPY ApenContainer.csproj ./
-RUN dotnet restore ./ApenContainer.csproj
-COPY . .
-WORKDIR /src/
-RUN dotnet build ApenContainer.csproj -c Release -o /app
-
-FROM build AS publish
-RUN dotnet publish ApenContainer.csproj -c Release -o /app
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app .
+COPY /app .
 ENTRYPOINT ["dotnet", "ApenContainer.dll"]

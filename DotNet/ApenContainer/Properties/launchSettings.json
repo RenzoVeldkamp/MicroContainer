@@ -4,7 +4,7 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:39152",
-      "sslPort": 40389
+      "sslPort": 0
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
@@ -29,7 +29,8 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://localhost:{ServicePort}/api/apen"
+      "launchUrl": "http://localhost:39152/api/apen"
+      //"launchUrl": "{Scheme}://localhost:{ServicePort}/api/apen"
     }
   }
 }

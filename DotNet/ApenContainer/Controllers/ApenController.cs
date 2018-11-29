@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AHC = ApenHok.Communication;
 
 namespace ApenContainer.Controllers
 {
@@ -12,41 +11,30 @@ namespace ApenContainer.Controllers
     [ApiController]
     public class ApenController : ControllerBase
     {
-        private readonly IBus bus;
+        private readonly IApenProvider ApenProvider;
 
-        public ApenController(IBus bus)
+        public ApenController(IApenProvider apenProvider)
         {
-            this.bus = bus;
-
-            if (!this.bus.IsConnected) throw new InvalidOperationException("Bus not connected!!!");
+            this.ApenProvider = apenProvider;
         }
 
         // GET: api/Apen
         [HttpGet]
-        public IEnumerable<Aap> Get()
+        public IEnumerable<AapModel> Get()
         {
-            //return ApenProvider.Apen;
-
-            /**/
-            AHC.GetApenResponse response = GetApen();
-
-            if (response.Success)
-                return response.Apen.Select(aap => ConvertToAapModel(aap));
-
-            return Enumerable.Empty<Aap>();
-            /**/
+            return ApenProvider.Apen;
         }
 
         // GET: api/Apen/5
         [HttpGet("{id}", Name = "Get")]
-        public Aap Get(int id)
+        public AapModel Get(int id)
         {
             return ApenProvider.Apen.FirstOrDefault(a => a.Id == id);
         }
 
         // POST: api/Apen
         [HttpPost]
-        public IActionResult Post([FromBody] Aap value)
+        public IActionResult Post([FromBody] AapModel value)
         {
             value.Id = ApenProvider.Apen.Count;
             ApenProvider.Apen.Add(value);
@@ -56,7 +44,7 @@ namespace ApenContainer.Controllers
 
         // PUT: api/Apen/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Aap value)
+        public IActionResult Put(int id, [FromBody] AapModel value)
         {
             var aapToUpdate = ApenProvider.Apen.FirstOrDefault(a => a.Id == id);
             aapToUpdate.Naam = value.Naam;
@@ -73,34 +61,6 @@ namespace ApenContainer.Controllers
             ApenProvider.Apen.Remove(aapToDelete);
 
             return Ok(aapToDelete);
-        }
-
-        private AHC.GetApenResponse GetApen()
-        {
-            AHC.GetApenResponse response = new AHC.GetApenResponse();
-
-            try
-            {
-                response = bus.Request<AHC.GetApenRequest, AHC.GetApenResponse>(new AHC.GetApenRequest { RequestId = Guid.NewGuid() });
-            }
-            catch (Exception ex)
-            {
-                // uh oh.....
-                Console.WriteLine($"Exception occurred: {ex.GetType().FullName}");
-                Console.WriteLine($"Exception message: {ex.Message}");
-            }
-
-            return response;
-        }
-
-        private Aap ConvertToAapModel(AHC.Aap aap)
-        {
-            return new Aap
-            {
-                Id = aap.Id,
-                Naam = aap.AapNaam,
-                Soort = Enum.GetName(typeof(AHC.ApenSoort), aap.Soort)
-            };
         }
     }
 }

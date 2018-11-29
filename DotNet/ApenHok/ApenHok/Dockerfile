@@ -11,14 +11,11 @@ COPY . .
 WORKDIR /src/ApenHok
 RUN dotnet build ApenHok.csproj -c Release -o /app
 
-# FROM build as pack
-# RUN dotnet pack /src/ApenHok.Communication/ApenHok.Communication.csproj -c Release
-# COPY ./src/ApenHok.Communication/bin/Release/ApenHok.Communication.1.0.1.nupkg /app
-
 FROM build AS publish
 RUN dotnet publish ApenHok.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+VOLUME ["/apenvolume"]
 ENTRYPOINT ["dotnet", "ApenHok.dll"]

@@ -9,7 +9,7 @@ namespace ApenHok.Data
 {
     public static class ApenProvider
     {
-        private const string VolumeName = "/apenvolume"; // @"C:\TEMP\DATA\APENVOLUME"; // 
+        private const string VolumeName = "/apenvolume"; // @"C:\DATA\TEMP\APENVOLUME"; //  
         private const string ApenFileName = "ApenHok.json";
         private static readonly string FileStore;
 
@@ -28,15 +28,15 @@ namespace ApenHok.Data
 
         public static IEnumerable<Aap> GetApen()
         {
-            Console.WriteLine($"Requesting all apen...");
+            Console.WriteLine($"************ Requesting all apen...");
 
             string json = File.ReadAllText(FileStore);
-            return JsonConvert.DeserializeObject<IEnumerable<Aap>>(json);
+            return JsonConvert.DeserializeObject<IEnumerable<Aap>>(json) ?? Enumerable.Empty<Aap>();
         }
 
         public static Aap GetAap(int Id)
         {
-            Console.WriteLine($"Requesting aap {Id}...");
+            Console.WriteLine($"************ Requesting aap {Id}...");
 
             return GetApen().FirstOrDefault(aap => aap.Id == Id);
         }
@@ -61,12 +61,12 @@ namespace ApenHok.Data
                 string json = JsonConvert.SerializeObject(alleApen);
                 File.WriteAllText(FileStore, json);
                 success = true;
-                Console.WriteLine("Successfully saved apen...");
+                Console.WriteLine("************ Successfully saved apen...");
             }
             catch (Exception ex)
             {
                 var wasistloos = ex;
-                Console.WriteLine($"Error saving aap: {ex.GetType().FullName} occurred: {ex.Message}...");
+                Console.WriteLine($"************ Error saving aap: {ex.GetType().FullName} occurred: {ex.Message}...");
             }
 
             return success;

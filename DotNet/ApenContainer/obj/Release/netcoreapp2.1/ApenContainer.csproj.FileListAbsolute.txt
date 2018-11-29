@@ -13,3 +13,16 @@ C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\A
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.RazorTargetAssemblyInfo.cache
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.dll
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Release\netcoreapp2.1\ApenContainer.pdb
+C:\app\appsettings.json
+C:\app\ApenContainer.deps.json
+C:\app\ApenContainer.runtimeconfig.json
+C:\app\ApenContainer.runtimeconfig.dev.json
+C:\app\ApenContainer.dll
+C:\app\ApenContainer.pdb
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\appsettings.json
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\ApenContainer.deps.json
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\ApenContainer.runtimeconfig.json
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\ApenContainer.runtimeconfig.dev.json
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\ApenContainer.dll
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\app\ApenContainer.pdb
+C:\data\GitRepos\MicroContainer\DotNet\apencontainer\bin\Release\netcoreapp2.1\appsettings.json

@@ -12,11 +12,11 @@ C:\TEMP\CORE\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.AssemblyInfo.cs
 C:\TEMP\CORE\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.RazorTargetAssemblyInfo.cache
 C:\TEMP\CORE\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.dll
 C:\TEMP\CORE\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.deps.json
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.runtimeconfig.json
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.runtimeconfig.dev.json
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.dll
-C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.pdb
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.csprojAssemblyReference.cache
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.csproj.CoreCompileInputs.cache
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.RazorAssemblyInfo.cache
@@ -24,7 +24,7 @@ C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\Ape
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.AssemblyInfoInputs.cache
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.AssemblyInfo.cs
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.RazorTargetAssemblyInfo.cache
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\ApenContainer.pdb
+C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.dll
 C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\ApenContainer.pdb
-C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
-C:\Data\GitRepos\MicroContainer\DotNet\ApenContainer\bin\Debug\netcoreapp2.1\appsettings.json

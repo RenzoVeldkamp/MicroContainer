@@ -1,4 +1,5 @@
-﻿using EasyNetQ;
+﻿using ApenContainer.Apen;
+using EasyNetQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,11 +26,24 @@ namespace ApenContainer
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<IBus>(CreateBus);
+            //services.AddSingleton<IApenProvider>(BusApenProviderFactory); /* Dit werkt ook.. */
+            services.AddSingleton<IApenProvider, BusApenProvider>();
         }
+
+        /* Dit werkt ook..
+        private IApenProvider BusApenProviderFactory(IServiceProvider arg)
+        {
+            IBus bus = arg.GetRequiredService<IBus>();
+            System.Diagnostics.Debug.Print($"{bus.GetHashCode()}");
+            return new BusApenProvider(bus);
+        }
+        */
 
         private IBus CreateBus(IServiceProvider serviceProvider)
         {
-            return RabbitHutch.CreateBus(rabbitConnectionString);
+            IBus bus = RabbitHutch.CreateBus(rabbitConnectionString);
+            System.Diagnostics.Debug.Print($"{bus.GetHashCode()}");
+            return bus;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +58,7 @@ namespace ApenContainer
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection(); // will cause certificate issues with docker-compose // GRRRR
 
             app.UseMvc();
         }
