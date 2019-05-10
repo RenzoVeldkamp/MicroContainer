@@ -4,8 +4,8 @@ Presentatie/~$Docker-based microservices.pptx
 Workshop/**/*Deelnemers*
 Workshop/**/*Evaluatie*
 Workshop/2017/Feedbackformulieren2017.pdf
-**/bin/**
-**/obj/**
+**\bin\**
+**\obj\**
 Publish/
 wwwroot/
 *.csproj.nuget.cache
