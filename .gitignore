@@ -4,4 +4,12 @@ Presentatie/~$Docker-based microservices.pptx
 Workshop/**/*Deelnemers*
 Workshop/**/*Evaluatie*
 Workshop/2017/Feedbackformulieren2017.pdf
-
+**/bin/
+**/obj/
+**/Publish/
+*.csproj.nuget.cache
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.csproj.user
+*.suo
+*.vspscc
