@@ -43,7 +43,7 @@ namespace ApenHok
             }
             else
             {
-                response.ErrorMessage = "Received request withour correlation identifier";
+                response.ErrorMessage = "Received request without correlation identifier";
             }
 
             return response;
