@@ -3,6 +3,7 @@ Presentatie/~$Docker-based microservices.pptx
 /DotNet/MVCSource/.vs
 Workshop/**/*Deelnemers*
 Workshop/**/*Evaluatie*
+Workshop/**/*Presentie*
 Workshop/2017/Feedbackformulieren2017.pdf
 
 Publish/
@@ -21,7 +22,8 @@ wwwroot/
 
 # IDE - Visual Studio
 .vs/**
-obj/**/*
-bin/**/*
+obj
+bin
 *.suo
 *.vspscc
+*.cache
