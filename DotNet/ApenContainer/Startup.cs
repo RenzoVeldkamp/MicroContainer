@@ -28,6 +28,7 @@ namespace ApenContainer
             services.AddSingleton<IBus>(CreateBus);
             //services.AddSingleton<IApenProvider>(BusApenProviderFactory); /* Dit werkt ook.. */
             services.AddSingleton<IApenProvider, BusApenProvider>();
+            services.AddSingleton<IAsyncApenProvider, AsyncBusApenProvider>();
         }
 
         /* Dit werkt ook..
