@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ApenHok": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace ApenHok.Communication
 {
-    public class GetApenResponse : BaseResponse
+    public class GetApenResponse : BaseMessage
     {
         public GetApenResponse()
         {
