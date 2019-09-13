@@ -8,3 +8,5 @@ launch.json
 tasks.json
 .\bin
 .\obj
+bin/**
+obj/**
