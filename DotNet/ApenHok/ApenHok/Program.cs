@@ -2,6 +2,7 @@
 using ApenHok.Data;
 using EasyNetQ;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,10 +43,10 @@ namespace ApenHok
             bus.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync);
 
             // Subscribe to event (without topic)
-            bus.SubscribeAsync<AapCreated>("CustomerCreatedSubscription", HandleAapCreatedAsync);
+            bus.SubscribeAsync<AapCreated>("DierCreatedSubscription", HandleAapCreatedAsync);
 
             // Set up receive queue for handling a command
-            bus.Receive<CreateAap>("CreateCustomerQueue", HandleCreateAapAsync);
+            bus.Receive<CreateAap>("CreateDierQueue", HandleCreateAapAsync);
         }
 
         /* Alternate options: with lots of configuration */
@@ -110,6 +111,7 @@ namespace ApenHok
 
         private static Task HandleAapCreatedAsync(AapCreated aapCreated)
         {
+            Console.WriteLine($"Aap {aapCreated.CreatedAap.AapNaam} was created: {JsonConvert.SerializeObject(aapCreated)}");
             // some business logic
             return Task.CompletedTask;
         }
@@ -120,6 +122,7 @@ namespace ApenHok
 
             if (command.AapToCreate != null)
             {
+                Console.WriteLine($"Creating animal {command.AapToCreate.AapNaam}: {JsonConvert.SerializeObject(command.AapToCreate)}");
                 successful = ApenProvider.AddAap(command.AapToCreate);
             }
 
@@ -162,6 +165,10 @@ namespace ApenHok
 
                 var aap2 = ApenProvider.GetAap(2);
                 if (aap2 == null) ApenProvider.AddAap(new Aap { Id = 2, AapNaam = "Johannes", Soort = ApenSoort.Sim });
+            }
+            else
+            {
+                Console.WriteLine("Seed data was already written...");
             }
         }
     }
