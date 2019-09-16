@@ -10,9 +10,7 @@ services:
       - konijn
     depends_on: [rabbitmq]
     volumes:
-      - type: volume
-        source: C:\data\temp\apenvolume
-        target: /apenvolume
+      - C:\data\temp\apenvolume:/apenvolume
   apencontainer:
     image: ${DOCKER_REGISTRY-}apencontainer
     build:
@@ -33,5 +31,6 @@ networks:
   konijn:
     driver: bridge
 
-volumes:
-  apenvolume:
+#volumes:
+  #apenvolume:
+    #driver: local  # is already local by default

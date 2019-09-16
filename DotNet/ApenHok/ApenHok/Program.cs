@@ -26,6 +26,7 @@ namespace ApenHok
             string rabbitConnectionString = configuration.GetValue<string>("Konijn");
             var bus = RabbitHutch.CreateBus(rabbitConnectionString);
 
+            ApenProvider.VolumeName = configuration.GetValue<string>("VolumeName");
             //SubscribeBus(bus);
 
             SubscribeToBus(bus);

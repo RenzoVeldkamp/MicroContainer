@@ -11,8 +11,8 @@ namespace ApenHok.Communication
         Baviaan,
         Gorilla,
         Sim,
-        Aap,
-        ZijderupsAapje,
+        Zijderupsaap,
+        Chimpansee,
         Primaat
     }
 }
