@@ -9,8 +9,6 @@ namespace ApenHok.Data
 {
     public static class ApenProvider
     {
-        //private const string VolumeName = "/apenvolume"; // @"C:\DATA\TEMP\APENVOLUME"; //  
-        //private const string VolumeName =  @"C:\DATA\TEMP\APENVOLUME";  
         private const string DierenFileName = "DierenHok.json";
         private static string FileStore;
 
@@ -27,9 +25,6 @@ namespace ApenHok.Data
                 InitProvider();
             }
         }
-
-        static ApenProvider()
-        { }
 
         public static void InitProvider()
         {
