@@ -1,0 +1,37 @@
+version: "2.4"
+
+services:
+  apenhok:
+    image: ${DOCKER_REGISTRY-}apenhok
+    build:
+      context: ../ApenHok
+      dockerfile: ./ApenHok/Dockerfile
+    networks:
+      - konijn
+    depends_on: [rabbitmq]
+    volumes:
+      - type: volume
+        source: C:\data\temp\apenvolume
+        target: /apenvolume
+  apencontainer:
+    image: ${DOCKER_REGISTRY-}apencontainer
+    build:
+      context: ../ApenContainer
+      dockerfile: Dockerfile
+    networks:
+      - konijn
+    depends_on: [apenhok, rabbitmq]
+  rabbitmq:
+    image: centricms/rabbitmq:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - konijn
+
+networks:
+  konijn:
+    driver: bridge
+
+volumes:
+  apenvolume:
