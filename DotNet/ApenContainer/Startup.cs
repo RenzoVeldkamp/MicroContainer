@@ -26,19 +26,9 @@ namespace ApenContainer
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<IBus>(CreateBus);
-            //services.AddSingleton<IApenProvider>(BusApenProviderFactory); /* Dit werkt ook.. */
             services.AddSingleton<IApenProvider, BusApenProvider>();
             services.AddSingleton<IAsyncApenProvider, AsyncBusApenProvider>();
         }
-
-        /* Dit werkt ook..
-        private IApenProvider BusApenProviderFactory(IServiceProvider arg)
-        {
-            IBus bus = arg.GetRequiredService<IBus>();
-            System.Diagnostics.Debug.Print($"{bus.GetHashCode()}");
-            return new BusApenProvider(bus);
-        }
-        */
 
         private IBus CreateBus(IServiceProvider serviceProvider)
         {
