@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DierenHok": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
