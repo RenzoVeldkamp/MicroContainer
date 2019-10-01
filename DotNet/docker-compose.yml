@@ -1,20 +1,25 @@
-# Showcase .Net
-# Application of 2 Docker containers
+# Showcase dierentuin
 
-version: '3'
+version: "2.4"
 services:
-  html:
-    image: centricms/mvc:latest
+  konijn:
+    image: centricms/konijn:latest
     ports:
-    - "5200:80"
-    links:
-    - webapi
-  nodejs:
-    image: centricms/webapi:latest
-    ports:
-    - "5300:80"
+      - "5672:5672"
+      - "15672:15672"
+  dierenhok:
+    image: centricms/dierenhok:spielerei
+    volumes:
+      - C:\TEMP\DATA\DIERENVOLUME:/dierenvolume
+    depends_on: [konijn]
+  dierentuin:
+    image: centricms/dierentuin:spielerei
+    ports: 
+      - "4200:80"
+    depends_on: [konijn]
+
 
 # no config: docker-compose up -d
 # local    : docker-compose -f docker-compose.yml -f local.yml up -d
 # cloud    : docker-compose -f docker-compose.yml -f Sim001Docker.yml up -d
-# down     : docker-compose down 
+# down     : docker-compose down
