@@ -1,24 +1,24 @@
 version: "2.4"
 
 services:
-  apenhok:
-    image: ${DOCKER_REGISTRY-}apenhok
+  dierenhok:
+    image: ${DOCKER_REGISTRY-}dierenhok
     build:
-      context: ../ApenHok
-      dockerfile: ./ApenHok/Dockerfile
+      context: ../DierenHok
+      dockerfile: ./DierenHok/Dockerfile
     networks:
       - konijn
     depends_on: [rabbitmq]
     volumes:
-      - C:\data\temp\apenvolume:/apenvolume
-  apencontainer:
-    image: ${DOCKER_REGISTRY-}apencontainer
+      - C:\data\temp\dierenvolume:/dierenvolume
+  dierencontainer:
+    image: ${DOCKER_REGISTRY-}dierencontainer
     build:
-      context: ../ApenContainer
+      context: ../DierenContainer
       dockerfile: Dockerfile
     networks:
       - konijn
-    depends_on: [apenhok, rabbitmq]
+    depends_on: [dierenhok, rabbitmq]
   rabbitmq:
     image: centricms/rabbitmq:latest
     build:
@@ -30,7 +30,3 @@ services:
 networks:
   konijn:
     driver: bridge
-
-#volumes:
-  #apenvolume:
-    #driver: local  # is already local by default

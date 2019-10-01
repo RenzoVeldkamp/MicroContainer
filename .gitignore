@@ -27,3 +27,4 @@ bin
 *.suo
 *.vspscc
 *.cache
+**/.vs/**
