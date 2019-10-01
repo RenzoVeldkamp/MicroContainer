@@ -8,12 +8,12 @@ services:
       - "5672:5672"
       - "15672:15672"
   dierenhok:
-    image: centricms/dierenhok:spielerei
+    image: centricms/dierenhok:latest
     volumes:
       - C:\TEMP\DATA\DIERENVOLUME:/dierenvolume
     depends_on: [konijn]
   dierentuin:
-    image: centricms/dierentuin:spielerei
+    image: centricms/dierentuin:latest
     ports: 
       - "4200:80"
     depends_on: [konijn]
