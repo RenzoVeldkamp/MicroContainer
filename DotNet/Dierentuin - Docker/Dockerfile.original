@@ -5,11 +5,12 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
-COPY ["Dierentuin.csproj", "./"]
-COPY ["NuGet.config", "./"]
-RUN dotnet restore "Dierentuin.csproj"
+COPY ["Dierentuin.csproj", ""]
+COPY ["NuGet.config", ""]
+ADD ["packages/", "/src/packages"]
+RUN dotnet restore "./Dierentuin.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/."
 RUN dotnet build "Dierentuin.csproj" -c Release -o /app/build
 
 FROM build AS publish
