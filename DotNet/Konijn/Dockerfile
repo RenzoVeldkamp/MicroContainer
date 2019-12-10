@@ -2,7 +2,7 @@
 # Centric, november 2018
 
 FROM rabbitmq:3.7-alpine
-cd ..
+
 RUN rabbitmq-plugins enable --offline rabbitmq_management
 
 # extract "rabbitmqadmin" from inside the "rabbitmq_management-X.Y.Z.ez" plugin zipfile

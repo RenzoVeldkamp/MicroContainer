@@ -3,5 +3,9 @@
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
     <_LastSelectedProfileId>C:\Data\GitRepos\MicroContainer\DotNet\ApenHok\ApenHok\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+    <ActiveDebugProfile>ApenHok</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

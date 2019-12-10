@@ -1,0 +1,32 @@
+version: "2.4"
+
+services:
+  dierenhok:
+    image: ${DOCKER_REGISTRY-}dierenhok
+    build:
+      context: ../DierenHok
+      dockerfile: ./DierenHok/Dockerfile
+    networks:
+      - konijn
+    depends_on: [rabbitmq]
+    volumes:
+      - C:\data\temp\dierenvolume:/dierenvolume
+  dierencontainer:
+    image: ${DOCKER_REGISTRY-}dierencontainer
+    build:
+      context: ../DierenContainer
+      dockerfile: Dockerfile
+    networks:
+      - konijn
+    depends_on: [dierenhok, rabbitmq]
+  rabbitmq:
+    image: centricms/rabbitmq:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - konijn
+
+networks:
+  konijn:
+    driver: bridge

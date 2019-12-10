@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dierenhok:
+    image: ${DOCKER_REGISTRY-}dierenhok
+    build:
+      context: .
+      dockerfile: DierenHok/Dockerfile

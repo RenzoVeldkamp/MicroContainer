@@ -11,8 +11,8 @@ namespace ApenContainer.Apen
         Baviaan,
         Gorilla,
         Sim,
-        Aap,
-        ZijderupsAapje,
+        Zijderupsaap,
+        Chimpansee,
         Primaat
     }
 }

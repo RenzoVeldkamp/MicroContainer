@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dierentuin:
+    image: ${DOCKER_REGISTRY-}dierentuin
+    build:
+      context: .
+      dockerfile: Dockerfile

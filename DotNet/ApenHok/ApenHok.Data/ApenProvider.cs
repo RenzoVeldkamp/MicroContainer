@@ -9,15 +9,28 @@ namespace ApenHok.Data
 {
     public static class ApenProvider
     {
-        private const string VolumeName = "/apenvolume"; // @"C:\DATA\TEMP\APENVOLUME"; //  
-        private const string ApenFileName = "ApenHok.json";
-        private static readonly string FileStore;
+        private const string DierenFileName = "DierenHok.json";
+        private static string FileStore;
 
-        static ApenProvider()
+        private static string _volumeName;
+        public static string VolumeName
+        {
+            get
+            {
+                return _volumeName;
+            }
+            set
+            {
+                _volumeName = value;
+                InitProvider();
+            }
+        }
+
+        public static void InitProvider()
         {
             if (!Directory.Exists(VolumeName)) throw new Exception("volume not mounted!!");
 
-            FileStore = Path.Combine(VolumeName, ApenFileName);
+            FileStore = Path.Combine(VolumeName, DierenFileName);
 
             if (!File.Exists(FileStore))
             {

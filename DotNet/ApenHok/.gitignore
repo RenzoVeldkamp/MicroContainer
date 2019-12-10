@@ -1,10 +1,29 @@
-*.pyc
-project.lock.json
-bin/
+node_modules/
+Presentatie/~$Docker-based microservices.pptx
+/DotNet/MVCSource/.vs
+Workshop/**/*Deelnemers*
+Workshop/**/*Evaluatie*
+Workshop/2017/Feedbackformulieren2017.pdf
+
+Publish/
+wwwroot/
+*.csproj.nuget.cache
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.csproj.user
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - Visual Studio
+.vs/**
+.vs\**
 obj/
-.vs/
-.vscode/
-launch.json
-tasks.json
-.\bin
-.\obj
+bin/
+*.suo
+*.vspscc
+*.*cache
