@@ -15,7 +15,7 @@ public animals:Array<Animal>;
    }
 
   ngOnInit() {
-    this.animalService.getAnimals().subscribe()
+    // this.animalService.getAnimals().subscribe()
   }
 
 }
