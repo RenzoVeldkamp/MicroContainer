@@ -5,7 +5,7 @@ import { Animal } from '../animal/animal';
 @Component({
   selector: 'app-zoo',
   templateUrl: './zoo.component.html',
-  styleUrls: ['./zoo.component.css']
+  styleUrls: ['./zoo.component.scss']
 })
 export class ZooComponent implements OnInit {
 public animals:Array<Animal>;

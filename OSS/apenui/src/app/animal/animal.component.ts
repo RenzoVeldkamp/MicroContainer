@@ -4,12 +4,14 @@ import { Animal } from './animal';
 @Component({
   selector: 'app-animal',
   templateUrl: './animal.component.html',
-  styleUrls: ['./animal.component.css']
+  styleUrls: ['./animal.component.scss']
 })
 export class AnimalComponent implements OnInit {
 @Input() public animal:Animal;
 
-  constructor() { }
+  constructor() {
+    this.animal = new Animal(0, 'name', 'species');
+   }
 
   ngOnInit() {
   }

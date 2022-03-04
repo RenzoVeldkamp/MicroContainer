@@ -1,15 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ZooComponent } from './zoo/zoo.component';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', component: ZooComponent },
-  // { path: 'apen', component: AppComponent },
-  // { path: 'leeuwen', component: AppComponent },
-  // { path: 'vogels', component: AppComponent },
-  // { path: 'vissen', component: AppComponent },
-  { path: '**', redirectTo: '/' }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
