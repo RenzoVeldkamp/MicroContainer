@@ -37,14 +37,14 @@ namespace DierenHok
         private static void SubscribeToBus(IBus bus)
         {
             // 'RPC style' handler: request - response
-            bus.RespondAsync<GetDierenRequest, GetDierenResponse>(HandleGetDierenRequestAsync);
+            bus.Rpc.RespondAsync<GetDierenRequest, GetDierenResponse>(HandleGetDierenRequestAsync);
 
             /*
             // Subscribe to event (without topic)
-            bus.SubscribeAsync<DierCreated>("DierCreatedSubscription", HandleDierCreatedAsync);
+            bus.PubSub.SubscribeAsync<DierCreated>("DierCreatedSubscription", HandleDierCreatedAsync);
 
             // Set up receive queue for handling a command
-            bus.Receive<CreateDier>("CreateDierQueue", HandleCreateDierAsync);
+            bus.SendReceive.Receive<CreateDier>("CreateDierQueue", HandleCreateDierAsync);
             */
         }
 
@@ -52,13 +52,13 @@ namespace DierenHok
         /* private static void SubscribeToBus(IBus bus)
         {
             // 'RPC style' handler: request - response
-            bus.RespondAsync<GetDierenRequest, GetDierenResponse>(HandleGetDierenRequestAsync, (config) => {
+            bus.Rpc.RespondAsync<GetDierenRequest, GetDierenResponse>(HandleGetDierenRequestAsync, (config) => {
                 config.WithPrefetchCount(5);
                 config.WithQueueName("RPCqueue");
             });
 
             // Subscribe to event (with or without topic)
-            bus.SubscribeAsync<DierCreated>("supskripsjun", HandleDierCreatedAsync, (config) => {
+            bus.PubSub.SubscribeAsync<DierCreated>("supskripsjun", HandleDierCreatedAsync, (config) => {
                 config.WithAutoDelete(true);
                 config.AsExclusive();
                 config.WithQueueName("kjoeneem");
@@ -67,7 +67,7 @@ namespace DierenHok
             });
 
             // Set up receive queue for handling a command
-            bus.Receive<CreateDier>("CreateDierQueue", HandleCreateDierAsync, (config) => {
+            bus.SendReceive.Receive<CreateDier>("CreateDierQueue", HandleCreateDierAsync, (config) => {
                 config.AsExclusive();
                 config.WithPrefetchCount(15);
                 config.WithPriority(5);

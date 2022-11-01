@@ -40,26 +40,26 @@ namespace ApenHok
         private static void SubscribeToBus(IBus bus)
         {
             // 'RPC style' handler: request - response
-            bus.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync);
+            bus.Rpc.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync);
 
             // Subscribe to event (without topic)
-            bus.SubscribeAsync<AapCreated>("DierCreatedSubscription", HandleAapCreatedAsync);
+            bus.PubSub.SubscribeAsync<AapCreated>("DierCreatedSubscription", HandleAapCreatedAsync);
 
             // Set up receive queue for handling a command
-            bus.Receive<CreateAap>("CreateDierQueue", HandleCreateAapAsync);
+            bus.SendReceive.Receive<CreateAap>("CreateDierQueue", HandleCreateAapAsync);
         }
 
         /* Alternate options: with lots of configuration */
         /* private static void SubscribeToBus(IBus bus)
         {
             // 'RPC style' handler: request - response
-            bus.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync, (config) => {
+            bus.Rpc.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync, (config) => {
                 config.WithPrefetchCount(5);
                 config.WithQueueName("RPCqueue");
             });
 
             // Subscribe to event (with or without topic)
-            bus.SubscribeAsync<AapCreated>("supskripsjun", HandleAapCreatedAsync, (config) => {
+            bus.PubSub.SubscribeAsync<AapCreated>("supskripsjun", HandleAapCreatedAsync, (config) => {
                 config.WithAutoDelete(true);
                 config.AsExclusive();
                 config.WithQueueName("kjoeneem");
@@ -68,7 +68,7 @@ namespace ApenHok
             });
 
             // Set up receive queue for handling a command
-            bus.Receive<CreateAap>("CreateAapQueue", HandleCreateAapAsync, (config) => {
+            bus.SendReceive.Receive<CreateAap>("CreateAapQueue", HandleCreateAapAsync, (config) => {
                 config.AsExclusive();
                 config.WithPrefetchCount(15);
                 config.WithPriority(5);
