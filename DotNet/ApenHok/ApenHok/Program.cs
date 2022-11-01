@@ -35,7 +35,7 @@ namespace ApenHok
             Seed();
         }
 
-        private static void SubscribeBus(IBus bus) => bus.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync);
+        private static void SubscribeBus(IBus bus) => bus.Rpc.RespondAsync<GetApenRequest, GetApenResponse>(HandleGetApenRequestAsync);
 
         private static void SubscribeToBus(IBus bus)
         {
