@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^19.2.16",
     "@angular/platform-browser-dynamic": "^19.2.16",
     "@angular/router": "^19.2.16",
+    "@types/karma-jasmine": "^4.0.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
