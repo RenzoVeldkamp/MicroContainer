@@ -2,7 +2,7 @@
 # OSS - no tag
 
 FROM nginx:stable-alpine
-MAINTAINER Johannes Sim / Renzo Veldkamp
+LABEL author="Johannes Sim / Renzo Veldkamp"
 ENV REFRESHED_AT 2017-09-01
 
 COPY  index.html *.png /usr/share/nginx/html/
