@@ -3,7 +3,7 @@
 
 // import require from 'require';
 
-export default function (config) {
+module.default = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
