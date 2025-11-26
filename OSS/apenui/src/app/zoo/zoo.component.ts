@@ -3,9 +3,10 @@ import { AnimalService } from '../services/animal.service';
 import { Animal } from '../animal/animal';
 
 @Component({
-  selector: 'app-zoo',
-  templateUrl: './zoo.component.html',
-  styleUrls: ['./zoo.component.scss']
+    selector: 'app-zoo',
+    templateUrl: './zoo.component.html',
+    styleUrls: ['./zoo.component.scss'],
+    standalone: false
 })
 export class ZooComponent implements OnInit {
 public animals:Array<Animal>;
