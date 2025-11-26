@@ -1,4 +1,4 @@
-<div *ngFor="let animal of animals">
-  <!-- <app-animal [info]="animal"></app-animal> -->
-  <app-animal></app-animal>
-</div>
+@for (animal of animals; track animal) {
+  <app-animal [animal]="animal"></app-animal>
+  <!-- <app-animal></app-animal> -->
+}

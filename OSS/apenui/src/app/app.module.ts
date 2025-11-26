@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ZooComponent } from './zoo/zoo.component';
 
 import { AnimalService } from './services/animal.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AnimalService } from './services/animal.service';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
   providers: [
